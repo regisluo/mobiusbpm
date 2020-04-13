@@ -6,14 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="flowable-ui-modeler-logic" />
-        <module name="flowable-ui-idm-rest" />
-        <module name="flowable-ui-idm-app" />
-        <module name="flowable-ui-modeler-conf" />
-        <module name="flowable-ui-modeler-rest" />
         <module name="flowable-ui-modeler-app" />
-        <module name="flowable-ui-idm-logic" />
-        <module name="flowable-ui-idm-conf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

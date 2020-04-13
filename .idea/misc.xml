@@ -17,9 +17,6 @@
         <option value="$PROJECT_DIR$/mobius-app/mba-iam/flowable-ui-admin-logic/pom.xml" />
         <option value="$PROJECT_DIR$/mobius-app/mba-iam/flowable-ui-admin-rest/pom.xml" />
         <option value="$PROJECT_DIR$/mobius-app/mba-iam/pom.xml" />
-        <option value="$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-idm-app/pom.xml" />
-        <option value="$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/pom.xml" />
-        <option value="$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/pom.xml" />
         <option value="$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-app/pom.xml" />
       </list>
     </option>
