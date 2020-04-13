@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="flowable-ui-admin-app:war">
+    <output-path>$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-admin-app/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>flowable-ui-admin-app</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="flowable-admin.war">
+      <element id="artifact" artifact-name="flowable-ui-admin-app:war exploded" />
+    </root>
+  </artifact>
+</component>

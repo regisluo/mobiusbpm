@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-idm-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-idm-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-idm-conf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-idm-logic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-idm-logic/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-idm/flowable-ui-idm-rest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-conf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-conf/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-logic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-logic/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mobius-app/flowable-app/flowable-ui-modeler/flowable-ui-modeler-rest/src/main/java" charset="UTF-8" />
+  </component>
+</project>
