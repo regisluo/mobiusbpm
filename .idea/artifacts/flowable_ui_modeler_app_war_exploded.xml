@@ -76,8 +76,6 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.10.2" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-json-org:2.10.2" />
           <element id="library" level="project" name="Maven: org.json:json:20180813" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-hppc:2.10.3" />
-          <element id="library" level="project" name="Maven: com.carrotsearch:hppc:0.8.1" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-joda:2.10.2" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:28.2-jre" />
           <element id="library" level="project" name="Maven: com.google.guava:failureaccess:1.0.1" />
@@ -95,6 +93,8 @@
           <element id="library" level="project" name="Maven: org.flowable:flowable-spring-boot-autoconfigure:6.5.0" />
           <element id="library" level="project" name="Maven: org.flowable:flowable-spring-security:6.5.0" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:3.4.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-hppc:2.10.3" />
+          <element id="library" level="project" name="Maven: com.carrotsearch:hppc:0.8.1" />
           <element id="library" level="project" name="Maven: com.fasterxml.uuid:java-uuid-generator:3.3.0" />
           <element id="library" level="project" name="Maven: org.flowable:flowable-image-generator:6.5.0" />
           <element id="library" level="project" name="Maven: org.flowable:flowable-cmmn-model:6.5.0" />
