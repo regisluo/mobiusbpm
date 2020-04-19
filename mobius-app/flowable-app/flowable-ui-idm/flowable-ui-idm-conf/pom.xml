@@ -40,10 +40,10 @@
             <groupId>org.flowable</groupId>
             <artifactId>flowable-idm-spring</artifactId>
         </dependency>
-        <dependency>
+      <!--  <dependency>
             <groupId>org.flowable</groupId>
             <artifactId>flowable-ldap</artifactId>
-        </dependency>
+        </dependency>-->
 
 		<!-- LOGGING -->
         <dependency>
@@ -124,10 +124,10 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
         </dependency>
-        <dependency>
+      <!--  <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-ldap</artifactId>
-        </dependency>
+        </dependency>-->
 
 	</dependencies>
 
