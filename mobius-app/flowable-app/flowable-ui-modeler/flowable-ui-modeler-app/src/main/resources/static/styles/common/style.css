@@ -205,6 +205,7 @@ label {
 }
 
 /** Buttons **/
+/*
 button.btn, a.btn {
     background-color: #2980b9;
     color: #ffffff;
@@ -263,6 +264,7 @@ button.btn.btn-danger {
 .modal-header .btn, .header .btn {
     border-color: #e8edf1;
 }
+*/
 
 .content {
     padding: 0 10px;
@@ -302,6 +304,7 @@ button.btn.btn-danger {
 }
 
 /** Dropdowns and dropdown triggers */
+/*
 
 .dropdown-menu {
     -webkit-border-radius: 0px;
@@ -355,8 +358,10 @@ a.dropdown-toggle {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+*/
 
 /** Subtle dropdown (eg. sort) */
+/*
 
 .dropdown-subtle {
 	margin-right: 5px;
@@ -389,6 +394,7 @@ a.dropdown-toggle {
 .dropdown-subtle a {
 	cursor: pointer;
 }
+*/
 
 /** Popovers */
 .popover {
@@ -495,6 +501,7 @@ a.dropdown-toggle {
 }
 
 /* Navigation */
+/*
 
 .navbar {
     background-color: #1f3245;
@@ -517,7 +524,7 @@ a.dropdown-toggle {
 }
 
 .navbar .btn-group .btn-default:hover, .navbar .btn-group .btn-default:focus {
-    background-color: #121212;
+    background-color: #0AB4D6;
 }
 
 .navbar .btn-group .btn-default {
@@ -535,7 +542,7 @@ a.dropdown-toggle {
     padding-top: 0px;
     line-height: 40px;
     height: 40px;
-    width: 180px;
+    width: 300px;
 }
 
 
@@ -586,8 +593,10 @@ a.dropdown-toggle {
 .navbar-nav > li.active > a {
     color: #2980b9;
 }
+*/
 
 /* Sub header */
+/*
 .subheader {
     background-color: #e8edf1;
     min-height: 60px;
@@ -703,6 +712,7 @@ a.dropdown-toggle {
 .subheader .highlight {
     color: #ffeeaa;
 }
+*/
 
 
 /** Custom icons **/
@@ -988,14 +998,14 @@ a.dropdown-toggle {
 }
 
 .wrapper {
-    padding: 55px 15px 15px 15px;
-    max-width: 1400px;
-    min-width: 1024px;
+    /*padding: 15px 15px 15px 15px;*/
+    /*max-width: 1400px;*/
+    /*min-width: 1024px;*/
     margin: 0 auto;
 }
 
 .wrapper.full {
-    padding: 40px 0px 0px 0px;
+    /*padding: 40px 0px 0px 0px;*/
     overflow: hidden;
     max-width: 100%;
     min-width: 100%;

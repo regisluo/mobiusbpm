@@ -39,42 +39,57 @@
     <link href="styles/common/style.css" rel="stylesheet">
     <link href="styles/common/style-retina.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style-editor.css">
+    <link href="styles/common/corporate.css" rel="stylesheet">
     <!-- endbuild -->
 
 </head>
 <body ng-app="flowableModeler" ng-cloak>
 
-    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation" id="main-header">
-        <div class="fixed-container">
-            <div class="navbar-header">
-                <a ng-click="backToLanding()" class="landing-logo" ng-if="account != null && account != undefined" title="{{'GENERAL.MAIN-TITLE' | translate}}">
-                    <img ng-src="{{appResourceRoot}}images/flowable-logo.png" ng-srcset="{{appResourceRoot}}images/flowable-logo.png 1x, {{appResourceRoot}}images/flowable-logo@2x.png 2x">
-                </a>
-                <ul class="nav navbar-nav" id="main-nav" ng-show="authenticated">
-                    <li ng-class="{'active' : item.id == mainPage.id}" ng-repeat="item in mainNavigation">
-                        <a ng-click="setMainPage(item)">{{item.title | translate}}</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="pull-right {{currentAppDefinition.definition.theme}}"
-                 ng-class="{'app-indicator': currentAppDefinition}" ng-if="authenticated" ng-cloack>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Mobius Process Designer</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="main-nav" ng-show="authenticated">
+                <li ng-class="{'active' : item.id == mainPage.id}" ng-repeat="item in mainNavigation">
+                    <a ng-click="setMainPage(item)">{{item.title | translate}}</a>
+                </li>
+            </ul>
+
+            <div class="pull-right nav navbar-nav navbar-right {{currentAppDefinition.definition.theme}}"
+                ng-class="{'app-indicator': currentAppDefinition}" activiti-fix-dropdown-bug>
                 <span ng-if="currentAppDefinition.definition.theme">
                     {{currentAppDefinition.name}}
                 </span>
                 <i class="glyphicon {{currentAppDefinition.definition.icon}}"></i>
-
-                <div class="dropdown btn-group btn-group-sm" activiti-fix-dropdown-bug>
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                    	{{account.firstName && account.firstName != 'null' ? account.firstName : ''}} {{account.lastName && account.lastName != 'null' ? account.lastName : ''}}
-                        <span class="glyphicon glyphicon-chevron-down" style="font-size: 10px" aria-hidden="true"></span>
-                    </button>
+<!--                <li><a href="#">Link</a></li>-->
+                <div class="dropdown" activiti-fix-dropdown-bug>
+                    <a class="dropdown-toggle" data-toggle="dropdown" >
+                        {{account.firstName && account.firstName != 'null' ? account.firstName : ''}} {{account.lastName && account.lastName != 'null' ? account.lastName : ''}}
+                        <span class="caret" aria-hidden="true"></span></a>
                     <ul class="dropdown-menu pull-right">
                         <li><a href="" ng-click="logout()" translate>GENERAL.ACTION.LOGOUT</a></li>
+          <!--              <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>-->
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 
     <!--[if lt IE 9]>
     <div class="unsupported-browser">
