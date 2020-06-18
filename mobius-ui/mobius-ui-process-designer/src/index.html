@@ -45,10 +45,10 @@
     <link href="css/style.css" rel="stylesheet">
 
 </head>
-<body ng-app="app" ng-cloak class="header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+<body ng-app="app" ng-cloak>
 
 <!-- User Interface -->
-<div class="alert-wrapper" ng-cloak>
+<!--<div class="alert-wrapper" ng-cloak>
     <div class="alert fadein {{alerts.current.type}}" ng-if="alerts.current" ng-click="dismissAlert()">
         <i class="glyphicon"
            ng-class="{'glyphicon-ok': alerts.current.type == 'info', 'glyphicon-remove': alerts.current.type == 'error'}"></i>
@@ -58,13 +58,118 @@
             <span class="badge">{{alerts.queue.length + 1}}</span>
         </div>
     </div>
-</div>
+</div>-->
 <!-- this is used by coreui -->
 <!--<ui-view class="app"></ui-view>-->
+<!-- Navbar -->
+<div ng-include="'views/common/navbar.html'" include-replace></div>
+<div class="app-body">
+    <!-- Navigation -->
+<!--    <div ng-include="'views/common/sidebar-nav.html'" include-replace></div>-->
+    <!-- Main content -->
+    <main class="main">
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb" breadcrumb>
+<!--            <ncy-breadcrumb></ncy-breadcrumb>-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <a class="navbar-brand" href="#">Process Designer</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<!-- ng-view is used by flowable -->
-<div id="main" class="wrapper full clearfix" ng-view="" ng-cloak ng-style="{height: window.height + 'px'}">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" id="processDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Process
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">New</a>
+                                <a class="dropdown-item" href="#">Open</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Save</a>
+                                <a class="dropdown-item" href="#">Duplicate</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Import</a>
+                                <a class="dropdown-item" href="#">Export</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="EditDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Edit
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Undo</a>
+                                <a class="dropdown-item" href="#">Redo</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Cut</a>
+                                <a class="dropdown-item" href="#">Copy</a>
+                                <a class="dropdown-item" href="#">Paste</a>
+                                <a class="dropdown-item" href="#">Delete</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Validate</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="viewDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                View
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">√ Process Folders</a>
+                                <a class="dropdown-item" href="#">√ Recent History</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Zoom In</a>
+                                <a class="dropdown-item" href="#">Zoom Out</a>
+                                <a class="dropdown-item" href="#">Actual Size</a>
+                                <a class="dropdown-item" href="#">Fit In</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="publishDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Publish
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Publish</a>
+                                <a class="dropdown-item" href="#">Duplicate and Publish</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="helpDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Help
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Process Designer</a>
+                                <a class="dropdown-item" href="#">About Mobius Process</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Breadcrumb Menu-->
+            <li class="breadcrumb-menu">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <a class="btn" href="#"><i class="icon-speech"></i></a>
+                    <a class="btn" ui-sref="app.main"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+                    <a class="btn" ui-sref="app.main"><i class="icon-settings"></i> &nbsp;Settings</a>
+                </div>
+            </li>
+
+        </ol>
+        <div class="container-fluid">
+            <div id="main" class="wrapper full clearfix" ng-view="" ng-cloak ng-style="{height: window.height + 'px'}">
+            </div>
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+
+    <!-- Aside Menu -->
+<!--    <div ng-include="'views/common/aside.html'" include-replace></div>-->
+
 </div>
+
+<!-- Footer -->
+<div ng-include="'views/common/footer.html'" include-replace></div>
+
 
 <script src="libs/jquery_1.11.0/jquery.min.js"></script>
 <script src="libs/jquery-ui-1.10.3.custom.min.js"></script>

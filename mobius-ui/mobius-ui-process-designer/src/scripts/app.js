@@ -57,7 +57,8 @@ var flowableApp = app;
 
 app
     // Initialize routes
-    .config(['$provide', '$routeProvider', '$selectProvider', '$translateProvider', function ($provide, $routeProvider, $selectProvider, $translateProvider) {
+    .config(['$provide', '$routeProvider', '$selectProvider', '$translateProvider',
+        function ($provide, $routeProvider, $selectProvider, $translateProvider) {
 
         var appResourceRoot = FLOWABLE.CONFIG.webContextRoot + (FLOWABLE.CONFIG.webContextRoot ? '/' : '');
         $provide.value('appResourceRoot', appResourceRoot);
@@ -69,7 +70,7 @@ app
         });
 
         $routeProvider
-            .when('/dashboard', {
+            .when('/main', {
                 templateUrl: appResourceRoot + 'views/main.html'
             })
             .when('/processes', {
@@ -147,7 +148,9 @@ app
             .when('/app-editor/:modelId', {
                 templateUrl: appResourceRoot + 'views/app-definition-builder.html',
                 controller: 'AppDefinitionBuilderController'
-            });
+            }).when('/login', {
+            templateUrl: appResourceRoot + 'views/pages/login.html'
+        });
 
         if (FLOWABLE.CONFIG.appDefaultRoute) {
             $routeProvider.when('/', {
