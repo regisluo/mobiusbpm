@@ -100,7 +100,7 @@ body {
   line-height: 1.5;
   color: #151b1e;
   text-align: left;
-  background-color: #e4e5e6; }
+  background-color: #ffffff; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -8394,7 +8394,7 @@ body {
 
 .aside-menu {
   z-index: 1019;
-  width: 250px;
+  /*width: 250px;*/
   color: #29363d;
   background: #fff;
   border-left: 1px solid #a4b7c1; }
@@ -10361,7 +10361,7 @@ base-chart.chart {
   padding: 0;
   margin: 0;
   background-color: #fff;
-  border-bottom: 1px solid #a4b7c1; }
+  /*border-bottom: 1px solid #a4b7c1;*/ }
   .app-header.navbar .navbar-brand {
     display: inline-block;
     width: 155px;
@@ -10373,7 +10373,7 @@ base-chart.chart {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 70px auto;
-    border-bottom: 1px solid #a4b7c1; }
+    /*border-bottom: 1px solid #a4b7c1;*/ }
   .app-header.navbar .navbar-toggler {
     min-width: 50px;
     padding: 0.25rem 0; }
