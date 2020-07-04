@@ -37,7 +37,7 @@
 		<div class="col-xs-10 item-wrapper" id="list-items">
 			<div class="item fadein" ng-repeat="process in model.processes.data track by $index">
 				<div class="item-box" ng-style="{'background-image': 'url(\'' + getModelThumbnailUrl(process.id, imageVersion) + '\')'}" ng-click="showProcessDetails(process);">
-				<!--	<div class="actions">
+					<div class="actions">
 						<span class="badge">v{{process.version}}</span>
 						<div class="btn-group pull-right">
 							<button id="detailsButton" type="button" ng-click="showProcessDetails(process); $event.stopPropagation();" class="btn btn-default" title="{{'PROCESS.ACTION.DETAILS' | translate}}">
@@ -47,7 +47,7 @@
 								<i class="glyphicon glyphicon-edit"></i>
 							</button>
 						</div>
-					</div>-->
+					</div>
 					<div class="details">
 						<h3 class="truncate" title="{{process.name}}">
 							{{process.name}}

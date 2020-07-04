@@ -45,6 +45,7 @@
 
 .editor-toolbar {
     padding-left: 5px;
+    margin-bottom: 15px;
 }
 
 .editor-toolbar > .btn-group {
@@ -57,7 +58,7 @@
 
 .editor-toolbar .btn.btn-inverse {
     font-size: 24px;
-    color: #FFFFFF;
+    color: #FFFFFF;/*#FFFFFF;*/
     border-color: rgba(0, 0, 0, 0);
     padding: 3px 6px 0px 6px;
     box-shadow: none;
@@ -1155,7 +1156,7 @@ hot-table .column-header.label {
 }
 
 #contentCanvasWrapper {
-    padding-left: 300px;
+    /*padding-left: 300px;*/
     transition: 0.3s padding-left;
 }
 
@@ -1206,5 +1207,5 @@ hot-table .column-header.label {
 }
 
 .current-process {
-    border: 1px solid green;
+    border: 1px solid lightgreen;
 }
