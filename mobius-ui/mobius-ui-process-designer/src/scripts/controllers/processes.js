@@ -15,6 +15,51 @@
 angular.module('app')
   .controller('ProcessesCtrl', ['$rootScope', '$scope', '$translate', '$http', '$timeout','$location', '$modal', function ($rootScope, $scope, $translate, $http, $timeout, $location, $modal) {
 
+      var columnDefs = [
+          // {headerName: '', width: 40, checkboxSelection: true, sortable: false, suppressMenu: true},
+          {headerName: "Process Code",width: 60, cellRenderer: codeCellRenderFunc},
+          {headerName: "Process Name", width: 50, field: "name", editable: true},
+          {headerName: "Version", width: 30, field: "version"},
+          {headerName: "Effective Date",width: 60, field: "lastUpdated", editable: true},
+          {headerName: "Status", width: 20,field: "modelType"},
+          {headerName: "Process Description",width: 60, field: "description", editable: true}
+      ];
+
+      function codeDoubleClicked(processId){
+          console.log('processId: '+processId)
+          $rootScope.editorHistory = [];
+          $location.path("/editor/" + processId);
+      }
+
+      function codeCellRenderFunc(params){
+          console.log(params)
+          params.$scope.codeClicked = codeDoubleClicked;
+          return '<a style="font-weight: bold;" ng-bind="data.id" ng-click="codeClicked(data.id)"></a>';
+      }
+      $scope.gridOptions = {
+          angularCompileRows: true,
+          paginationPageSize: 10,
+          enableCellTextSelection: true,
+          rowSelection: 'multiple',
+          pagination: true,
+          columnDefs: columnDefs,
+          rowData: null,
+          defaultColDef: {
+              sortable: true,
+              filter: true,
+              resize: true
+          },
+          onGridReady: function(params) {
+              params.api.sizeColumnsToFit();
+          },
+          onRowDoubleClicked: function(e){
+              console.log(e)
+              e.source.scope.codeClicked(e.data.id);
+          },
+          onFirstDataRendered: function(params) {
+              params.api.sizeColumnsToFit();
+          }
+      }
       // Main page (needed for visual indicator of current page)
       $rootScope.setMainPageById('processes');
       $rootScope.formItems = undefined;
@@ -80,6 +125,7 @@ angular.module('app')
 		  	success(function(data, status, headers, config) {
 	    		$scope.model.processes = data;
 	    		$scope.model.loading = false;
+                $scope.gridOptions.api.setRowData($scope.model.processes.data);
 	        }).
 	        error(function(data, status, headers, config) {
 	           console.log('Something went wrong: ' + data);

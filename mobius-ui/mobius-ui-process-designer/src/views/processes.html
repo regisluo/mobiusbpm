@@ -1,4 +1,3 @@
-
 <!--<div class="subheader">
 	<div class="fixed-container">
 		<div class="btn-group pull-right">
@@ -9,60 +8,95 @@
 	</div>
 </div>-->
 <div class="container-fluid content" auto-height offset="40">
-		<div class="col-xs-2 filter-wrapper">
-			<aside class="aside-menu">
-				<div class="list-group">
-					<button type="button" class="list-group-item list-group-item-action active font-weight-bold">
-						Process List
-					</button>
-					<button type="button" class="list-group-item list-group-item-action">left aside folder 1 </button>
-					<button type="button" class="list-group-item list-group-item-action">left aside folder 2</button>
-					<button type="button" class="list-group-item list-group-item-action">left aside folder 3</button>
-					<button type="button" class="list-group-item list-group-item-action" disabled>left aside folder 4</button>
-				</div>
-			</aside>
-			<!--<div class="input-group">
-				<span class="input-group-addon"> <i
-					class="glyphicon glyphicon-search"></i>
-				</span> <input type="text" ng-model="model.pendingFilterText" class="form-control" ng-change="filterDelayed()"
-					placeholder="{{'PROCESS-LIST.SEARCH-PLACEHOLDER' | translate}}">
-			</div>
-			<ul class="filter-list">
-				<li ng-repeat="filter in model.filters" ng-class="{'current' : filter.id == model.activeFilter.id}">
-					<a ng-click="activateFilter(filter)">{{'PROCESS-LIST.FILTER.' + filter.labelKey | translate}}</a>
-				</li>
-			</ul>-->
-		</div>
+    <div class="col-xs-2 filter-wrapper">
+        <aside class="aside-menu">
+            <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action active font-weight-bold">
+                    Process List
+                </button>
+                <button type="button" class="list-group-item list-group-item-action">left aside folder 1</button>
+                <button type="button" class="list-group-item list-group-item-action">left aside folder 2</button>
+                <button type="button" class="list-group-item list-group-item-action">left aside folder 3</button>
+                <button type="button" class="list-group-item list-group-item-action" disabled>left aside folder 4
+                </button>
+            </div>
+        </aside>
+        <!--<div class="input-group">
+            <span class="input-group-addon"> <i
+                    class="glyphicon glyphicon-search"></i>
+            </span> <input type="text" ng-model="model.pendingFilterText" class="form-control"
+                           ng-change="filterDelayed()"
+                           placeholder="{{'PROCESS-LIST.SEARCH-PLACEHOLDER' | translate}}">
+        </div>
+        <ul class="filter-list">
+            <li ng-repeat="filter in model.filters" ng-class="{'current' : filter.id == model.activeFilter.id}">
+                <a ng-click="activateFilter(filter)">{{'PROCESS-LIST.FILTER.' + filter.labelKey | translate}}</a>
+            </li>
+        </ul>-->
+    </div>
 
-		<div class="col-xs-10 item-wrapper" id="list-items">
-			<div class="item fadein" ng-repeat="process in model.processes.data track by $index">
-				<div class="item-box" ng-style="{'background-image': 'url(\'' + getModelThumbnailUrl(process.id, imageVersion) + '\')'}" ng-click="showProcessDetails(process);">
-					<div class="actions">
-						<span class="badge">v{{process.version}}</span>
-						<div class="btn-group pull-right">
-							<button id="detailsButton" type="button" ng-click="showProcessDetails(process); $event.stopPropagation();" class="btn btn-default" title="{{'PROCESS.ACTION.DETAILS' | translate}}">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-							<button id="editButton" type="button" ng-click="editProcessDetails(process); $event.stopPropagation();" class="btn btn-default" title="{{'PROCESS.ACTION.OPEN-IN-EDITOR' | translate}}">
-								<i class="glyphicon glyphicon-edit"></i>
-							</button>
-						</div>
-					</div>
-					<div class="details">
-						<h3 class="truncate" title="{{process.name}}">
-							{{process.name}}
-						</h3>
-						<div class="basic-details truncate">
-							<span><i class="glyphicon glyphicon-user"></i> {{process.createdBy}}</span> <span title="{{process.lastUpdated | dateformat:'LLLL'}}"><i class="glyphicon glyphicon-pencil"></i> {{process.lastUpdated | dateformat}}</span>
-						</div>
-						<p>{{process.description}}</p>
-					</div>
-				</div>
-			</div>
+    <!-- <div class="col-xs-10 item-wrapper" id="list-items">
+         <div class="item fadein" ng-repeat="process in model.processes.data track by $index">
+             <div class="item-box"
+                  ng-style="{'background-image': 'url(\'' + getModelThumbnailUrl(process.id, imageVersion) + '\')'}"
+                  ng-click="showProcessDetails(process);">
+                 <div class="actions">
+                     <span class="badge">v{{process.version}}</span>
+                     <div class="btn-group pull-right">
+                         <button id="detailsButton" type="button"
+                                 ng-click="showProcessDetails(process); $event.stopPropagation();"
+                                 class="btn btn-default" title="{{'PROCESS.ACTION.DETAILS' | translate}}">
+                             <i class="glyphicon glyphicon-search"></i>
+                         </button>
+                         <button id="editButton" type="button"
+                                 ng-click="editProcessDetails(process); $event.stopPropagation();"
+                                 class="btn btn-default" title="{{'PROCESS.ACTION.OPEN-IN-EDITOR' | translate}}">
+                             <i class="glyphicon glyphicon-edit"></i>
+                         </button>
+                     </div>
+                 </div>
+                 <div class="details">
+                     <h3 class="truncate" title="{{process.name}}">
+                         {{process.name}}
+                     </h3>
+                     <div class="basic-details truncate">
+                         <span><i class="glyphicon glyphicon-user"></i> {{process.createdBy}}</span> <span
+                             title="{{process.lastUpdated | dateformat:'LLLL'}}"><i
+                             class="glyphicon glyphicon-pencil"></i> {{process.lastUpdated | dateformat}}</span>
+                     </div>
+                     <p>{{process.description}}</p>
+                 </div>
+             </div>
+         </div>
 
-			<div class="show-more" ng-if="model.processes.data.length < model.processes.total">
-				<a>{{'PROCESSES-LIST.ACTION.SHOW-MORE' | translate}}</a>
-			</div>
-		</div>
+         <div class="show-more" ng-if="model.processes.data.length < model.processes.total">
+             <a>{{'PROCESSES-LIST.ACTION.SHOW-MORE' | translate}}</a>
+         </div>
+     </div>-->
+    <div class="col-xs-8">
+        <div style="padding: 4px">
+            <input type="text" ng-model="gridOptions.quickFilterText" placeholder="Search..."/>
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-blue" ng-click="createProcess()" translate>PROCESS-LIST.ACTION.NEW</button>
+<!--                <button type="button" class="btn btn-default" ng-click="importProcess()" translate>PROCESS-LIST.ACTION.IMPORT</button>-->
+            </div>
+        </div>
+        <div ag-grid="gridOptions" class="ag-theme-alpine" style="height: 500px;"></div>
+    </div>
+
+
+    <div class="col-xs-2 align-items-end">
+        <aside class="aside-menu">
+            <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action active font-weight-bold">
+                    History Record
+                </button>
+                <button type="button" class="list-group-item list-group-item-action">right aside folder 1</button>
+                <button type="button" class="list-group-item list-group-item-action">right aside folder 2</button>
+                <button type="button" class="list-group-item list-group-item-action">right aside folder 3</button>
+                <button type="button" class="list-group-item list-group-item-action" disabled>right aside folder 4</button>
+            </div>
+        </aside>
+    </div>
 
 </div>

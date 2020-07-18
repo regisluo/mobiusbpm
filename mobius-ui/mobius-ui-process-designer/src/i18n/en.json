@@ -1863,7 +1863,8 @@
         "SEARCH-PLACEHOLDER": "Search",
         "ACTION" : {
             "CREATE": "Create Process",
-            "IMPORT": "Import Process"
+            "IMPORT": "Import Process",
+              "NEW": "New"
         },
 
         "FILTER" : {

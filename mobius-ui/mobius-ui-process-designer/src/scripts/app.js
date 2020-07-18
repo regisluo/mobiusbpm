@@ -25,6 +25,8 @@ var grayLight =     '#818a91';
 var grayLighter =   '#d1d4d7';
 var grayLightest =  '#f8f9fa';
 
+agGrid.initialiseAgGridWithAngular1(angular);
+
 var app = angular.module('app', [
     'ngCookies',
     'ngResource',
@@ -49,7 +51,8 @@ var app = angular.module('app', [
     'ui.router',
     'oc.lazyLoad',
     'ncy-angular-breadcrumb',
-    'angular-loading-bar'
+    'angular-loading-bar',
+    'agGrid'
 ]);
 
 var flowableModule = app;
