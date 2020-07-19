@@ -36,6 +36,7 @@ angular.module('app')
           params.$scope.codeClicked = codeDoubleClicked;
           return '<a style="font-weight: bold;" ng-bind="data.id" ng-click="codeClicked(data.id)"></a>';
       }
+
       $scope.gridOptions = {
           angularCompileRows: true,
           paginationPageSize: 10,

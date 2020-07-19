@@ -74,14 +74,25 @@
          </div>
      </div>-->
     <div class="col-xs-8">
-        <div style="padding: 4px">
-            <input type="text" ng-model="gridOptions.quickFilterText" placeholder="Search..."/>
-            <div class="btn-group pull-right">
-                <button type="button" class="btn btn-blue" ng-click="createProcess()" translate>PROCESS-LIST.ACTION.NEW</button>
-<!--                <button type="button" class="btn btn-default" ng-click="importProcess()" translate>PROCESS-LIST.ACTION.IMPORT</button>-->
+
+        <div>
+            <div class="card-header">header
+
+            </div>
+            <div style="padding: 4px">
+                <input type="text" ng-model="gridOptions.quickFilterText" placeholder="Search..."/>
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-blue" ng-click="createProcess()" translate>
+                        PROCESS-LIST.ACTION.NEW
+                    </button>
+                    <!--                <button type="button" class="btn btn-default" ng-click="importProcess()" translate>PROCESS-LIST.ACTION.IMPORT</button>-->
+                </div>
+            </div>
+            <div class="card-body">
+                <div ag-grid="gridOptions" class="ag-theme-alpine" style="height: 500px;"></div>
             </div>
         </div>
-        <div ag-grid="gridOptions" class="ag-theme-alpine" style="height: 500px;"></div>
+
     </div>
 
 
@@ -94,7 +105,8 @@
                 <button type="button" class="list-group-item list-group-item-action">right aside folder 1</button>
                 <button type="button" class="list-group-item list-group-item-action">right aside folder 2</button>
                 <button type="button" class="list-group-item list-group-item-action">right aside folder 3</button>
-                <button type="button" class="list-group-item list-group-item-action" disabled>right aside folder 4</button>
+                <button type="button" class="list-group-item list-group-item-action" disabled>right aside folder 4
+                </button>
             </div>
         </aside>
     </div>
