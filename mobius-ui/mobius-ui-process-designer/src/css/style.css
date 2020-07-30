@@ -3929,7 +3929,7 @@ tbody.collapse.show {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  padding: 3rem 3rem; }/*0.5rem 1rem*/
   .navbar > .container,
   .navbar > .container-fluid {
     display: -ms-flexbox;
@@ -10364,15 +10364,15 @@ base-chart.chart {
   /*border-bottom: 1px solid #a4b7c1;*/ }
   .app-header.navbar .navbar-brand {
     display: inline-block;
-    width: 155px;
-    height: 55px;
+    width: 120px;
+    height: 90px;
     padding: 0.5rem 1rem;
     margin-right: 0;
     background-color: #fff;
-    background-image: url("../img/logo.png");
+    background-image: url("../img/logo_transparent.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 70px auto;
+    background-size: 115px auto;
     /*border-bottom: 1px solid #a4b7c1;*/ }
   .app-header.navbar .navbar-toggler {
     min-width: 50px;
