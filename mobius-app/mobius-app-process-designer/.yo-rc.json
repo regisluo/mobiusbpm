@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "mb.app.process.desinger",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.10.1",
+    "applicationType": "microservice",
+    "baseName": "mobiusAppProcessDesigner",
+    "packageName": "mb.app.process.desinger",
+    "packageFolder": "mb/app/process/desinger",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ODFiOWM2ZjFhZmRkNGRjZTY4YWFiNzBhY2M3NjhhNTczOTVkYjUxNjVlNWZmNTM4MjBkOTUyMmY0NDc3NDNlMWRiYTgwZmE0ZTM1OWI3OGU4NDM4ZDY0OTI0MTU4NDBiOWY3NWI0NGM5MGM0ZGQwY2M5ZGYwM2RiZTBkYmYwYmM=",
+    "embeddableLaunchScript": false,
+    "creationTimestamp": 1598099391730,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": ["en", "zh-cn", "ja"],
+    "blueprints": [],
+    "reactive": true,
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}

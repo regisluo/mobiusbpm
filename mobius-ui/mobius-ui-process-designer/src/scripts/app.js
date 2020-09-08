@@ -52,7 +52,8 @@ var app = angular.module('app', [
     'oc.lazyLoad',
     'ncy-angular-breadcrumb',
     'angular-loading-bar',
-    'agGrid'
+    'agGrid',
+    'treeGrid'
 ]);
 
 var flowableModule = app;

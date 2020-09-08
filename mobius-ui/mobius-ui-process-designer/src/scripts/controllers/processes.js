@@ -13,7 +13,8 @@
 'use strict';
 
 angular.module('app')
-  .controller('ProcessesCtrl', ['$rootScope', '$scope', '$translate', '$http', '$timeout','$location', '$modal', function ($rootScope, $scope, $translate, $http, $timeout, $location, $modal) {
+  .controller('ProcessesCtrl', ['$rootScope', '$scope', '$translate', '$http', '$timeout','$location', '$modal',
+    function ($rootScope, $scope, $translate, $http, $timeout, $location, $modal) {
 
       var columnDefs = [
           // {headerName: '', width: 40, checkboxSelection: true, sortable: false, suppressMenu: true},
@@ -185,6 +186,63 @@ angular.module('app')
 
 	  // Finally, load initial processes
 	  $scope.loadProcesses();
+
+	  $scope.empty_col_def=[{
+                                                          	    displayName:''
+    }];
+
+    $scope.process_data = [
+      {Processes:"Prototype",
+        children:[
+          {Processes:"New",
+            children:[
+              {Processes:"New"},
+              {Processes: "Validated"}
+            ]},
+          {Processes: "Validated"}
+          ]
+      },
+      {Processes:"Demo",
+        children:[
+          {Processes:"New"},
+          {Processes: "Validated"}
+        ]
+      },
+      {Processes:"Design",
+        children:[
+          {Processes:"New"},
+          {Processes: "Validated"}
+        ]
+      },
+      {Processes:"Publish",
+        children:[
+          {Processes:"New"},
+          {Processes: "Validated"}
+        ]
+      },
+      {Processes:"Archive",
+        children:[
+          {Processes:"New"},
+          {Processes: "Validated"}
+        ]
+      }
+    ];
+
+      $scope.history_data = [
+        {History:"Processes",
+          children:[
+            {History:"process1"},
+            {History: "process2"}
+          ]
+        },
+        {History:"Forms",
+          children:[
+            {History:"form1"},
+            {History: "form2"}
+          ]
+        }
+      ];
+
   }]);
 
 angular.module('app')
@@ -194,7 +252,7 @@ angular.module('app')
     $scope.model = {
        loading: false,
        process: {
-            name: '',
+            Processes: '',
             key: '',
             description: '',
            	modelType: 0
@@ -209,7 +267,7 @@ angular.module('app')
 
         if (!$scope.model.process.name || $scope.model.process.name.length == 0 ||
         	!$scope.model.process.key || $scope.model.process.key.length == 0) {
-        	
+
             return;
         }
 
@@ -243,7 +301,7 @@ angular.module('app')
     $scope.model = {
        loading: false,
        process: {
-            name: '',
+            Processes: '',
             key: '',
             description: ''
        }
@@ -260,9 +318,9 @@ angular.module('app')
 
     $scope.ok = function () {
 
-        if (!$scope.model.process.name || $scope.model.process.name.length == 0 || 
+        if (!$scope.model.process.name || $scope.model.process.name.length == 0 ||
         	!$scope.model.process.key || $scope.model.process.key.length == 0) {
-        	
+
             return;
         }
 
@@ -339,4 +397,7 @@ angular.module('app')
 		  $scope.$hide();
 	  }
   };
+
+
 }]);
+
