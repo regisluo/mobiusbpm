@@ -78,7 +78,8 @@ gulp.task('webserver', function () {
             open: 'http://localhost:3100',
             proxies: [
                 {
-                    source: '/app/rest/', target: 'http://localhost:8201/flowable-modeler/app/rest/'
+                    source: '/app/rest/', target: 'http://localhost:8081/app/rest/'
+                  /*'http://localhost:8201/flowable-modeler/app/rest/'*/
                 }
             ]
         }));
