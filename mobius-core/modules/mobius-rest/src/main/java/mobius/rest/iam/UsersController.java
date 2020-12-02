@@ -1,22 +1,24 @@
-package mb.app.process.desinger.web.rest.iam;
+package mobius.rest.iam;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import mb.app.process.desinger.vo.UserRepresentation;
-import mb.app.process.desinger.web.rest.ResourceName;
-import mb.app.process.desinger.web.rest.base.BaseController;
+import mobius.rest.api.resource.ResourceNames;
+import mobius.rest.api.resource.user.UsersResource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Controller for Users resource
+ */
 @RestController
-@RequestMapping(value = BaseController.MB_APP_REST_API_PREFIX + ResourceName.ACCOUNT)
-public class AuthController {
+@RequestMapping(value = ResourceNames.BASE_URL + ResourceNames.USERS)
+public class UsersController implements UsersResource {
     private ObjectMapper objectMapper = new ObjectMapper();
     private String testResponse = "{\"id\":\"admin\",\"firstName\":\"Test\",\"lastName\":\"Administrator\",\"email\":\"admin@flowable.org\",\"fullName\":\"Test Administrator\",\"tenantId\":null,\"groups\":[],\"privileges\":[\"access-idm\",\"access-rest-api\",\"access-task\",\"access-modeler\",\"access-admin\"]}";
 
     /**
-     * GET /rest/account -> get the current user.
+     * GET app/rest/users -> get the current user.
      */
     @GetMapping(value = "", produces = "application/json")
     public UserRepresentation getAccount() {
@@ -28,5 +30,4 @@ public class AuthController {
         }
         return userRepresentation;
     }
-
 }

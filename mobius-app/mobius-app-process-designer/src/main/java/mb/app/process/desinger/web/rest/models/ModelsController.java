@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping(value = BaseController.API_PREFIX+ ResourceName.MODELS)
+@RequestMapping(value = BaseController.MB_APP_REST_API_PREFIX + ResourceName.MODELS)
 public class ModelsController extends BaseController {
 
     private ObjectMapper objectMapper = new ObjectMapper();
@@ -23,7 +22,7 @@ public class ModelsController extends BaseController {
     public ResultListDataRepresentation getModels(@RequestParam(required = false) String filter,
                                                   @RequestParam(required = false) String sort,
                                                   @RequestParam(required = false) Integer modelType) {
-        ResultListDataRepresentation response=null;
+        ResultListDataRepresentation response = null;
         try {
             response = objectMapper.readValue(testResponse, ResultListDataRepresentation.class);
         } catch (JsonProcessingException e) {
